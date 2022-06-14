@@ -4,7 +4,7 @@ import pl.edu.mimuw.Gielda.Informacje;
 
 public class Pracus extends StrategiaPracy {
   @Override
-  public Czynnosc wybierzCzynnosc(Informacje info) {
+  public Czynnosc wybierzCzynnosc(double diamenty, double sredniaCenaJedzenia, int nrTury) {
     return Czynnosc.PRACA;
   }
 

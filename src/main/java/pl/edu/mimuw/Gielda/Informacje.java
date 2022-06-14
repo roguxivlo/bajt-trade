@@ -8,12 +8,12 @@ import java.util.Queue;
 
 
 public class Informacje {
-  public final double diamenty;
-  public final double[] srednieCenyJedzenia; // index 0 to cena z wczoraj, 1 to cena z przedwczoraj itd.
-  public final int nrTury;
-  public final Hashtable<Produkt, Queue<Integer>> sumaOfertSprzedazy; // Z ostatnich 16 dni, koniec kolejki to dane z wczoraj, początek to dane sprzed 16 tur.
+  public double diamenty;
+  public Queue<Double> srednieCenyJedzenia; // Początek kolejki to najdawniejsza cena. Koniec kolejki to cena z ostatniej tury
+  public int nrTury;
+  public Hashtable<Produkt, Queue<Integer>> sumaOfertSprzedazy; // Z ostatnich 16 dni, koniec kolejki to dane z wczoraj, początek to dane sprzed 16 tur.
 
-  public Informacje(int diamenty, double[] cenyJedzenia, int nrTury, Hashtable<Produkt, Queue<Integer>> sumaOfertSprzedazy) {
+  public Informacje(int diamenty, Queue<Double> cenyJedzenia, int nrTury, Hashtable<Produkt, Queue<Integer>> sumaOfertSprzedazy) {
     srednieCenyJedzenia = cenyJedzenia;
     this.diamenty = diamenty;
     this.nrTury = nrTury;

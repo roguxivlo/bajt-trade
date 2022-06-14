@@ -11,8 +11,8 @@ public class Okresowy extends StrategiaPracy {
   }
 
   @Override
-  public Czynnosc wybierzCzynnosc(Informacje info) {
-    if (info.nrTury % okresowoscNauki == 0) return Czynnosc.NAUKA;
+  public Czynnosc wybierzCzynnosc(double diamenty, double sredniaCenaJedzenia, int nrTury) {
+    if (nrTury % okresowoscNauki == 0) return Czynnosc.NAUKA;
     return Czynnosc.PRACA;
   }
 }

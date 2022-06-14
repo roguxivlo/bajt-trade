@@ -9,10 +9,10 @@ public class Rozkladowy extends StrategiaPracy {
   }
 
   @Override
-  public Czynnosc wybierzCzynnosc(Informacje info) {
+  public Czynnosc wybierzCzynnosc(double diamenty, double sredniaCenaJedzenia, int nrTury) {
     Random r = new Random();
     double los = r.nextDouble();
-    double granica = 1 / (3.0 + (double) info.nrTury);
+    double granica = 1 / (3.0 + (double) nrTury);
     if (los <= granica) return Czynnosc.NAUKA;
     return Czynnosc.PRACA;
   }

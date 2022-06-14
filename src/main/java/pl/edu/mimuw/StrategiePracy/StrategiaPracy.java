@@ -8,5 +8,5 @@ public abstract class StrategiaPracy {
     strategiaPracy = rodzaj;
   }
 
-  public abstract Czynnosc wybierzCzynnosc(Informacje info);
+  public abstract Czynnosc wybierzCzynnosc(double diamenty, double sredniaCenaJedzenia, int nrTury);
 }
